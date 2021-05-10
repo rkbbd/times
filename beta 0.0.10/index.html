@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>DateDiff</title>
+</head>
+
+<body>
+
+    <h1>DateDiff</h1>
+    <p>To calculate the difference between two dates in years, months, day etc.</p>
+    <hr>
+
+    <div style="width: 100%;">
+        <div style="float: left; width: 30%;min-height: 235px;">
+            <h3>1. Difference between two dates</h3>
+
+            <label for="StartDate">Start Date:</label>
+            <input type="text" id="StartDate" placeholder="MM/dd/yyyy hh:mm:ss tt" value="05/15/2021 05:30:30 pm"> ex:
+            05/15/2021<br><br>
+            <label for="EndDate">End Date:</label>
+            <input type="text" id="EndDate" placeholder="MM/dd/yyyy hh:mm:ss tt" value="05/10/2021"><br><br>
+            <input type="button" onclick="example_1()" value="Submit"><br><br>
+            <span id='ex1_display'></span>
+
+        </div>
+        <div style="float: left; width: 30%;min-height: 235px;">
+            <h3>2. Difference from today</h3>
+
+            <label for="ex2_Date">Date:</label>
+            <input type="text" id="ex2_Date" placeholder="MM/dd/yyyy hh:mm:ss tt" value="05/15/2021 05:30:30 pm"> ex:
+            05/15/2021<br><br>
+            <input type="button" onclick="example_2()" value="Submit"><br><br>
+            <span id='ex2_display'></span>
+
+        </div>
+        <div style="float: left; width: 30%;min-height: 235px;">
+            <h3>3. Real time changing</h3>
+
+            <label for="ex3_Date">Date:</label>
+            <input type="text" id="ex3_Date" placeholder="MM/dd/yyyy hh:mm:ss tt" value="05/15/2021"> ex:
+            05/15/2021<br><br>
+            <input type="button" onclick="example_3()" value="Submit"><br><br>
+            <span id='ex3_display'></span>
+
+        </div>
+        <br style="clear: left;" />
+    </div>
+
+    <div style="width: 100%;">
+        <div style="float: left; width: 30%;min-height: 235px;">
+            <h3>4. Difference between two dates [in total]</h3>
+
+            <label for="ex4_StartDate">Start Date:</label>
+            <input type="text" id="ex4_StartDate" placeholder="MM/dd/yyyy hh:mm:ss tt" value="05/15/2021 05:30:30 pm">
+            ex:
+            05/15/2021<br><br>
+            <label for="ex4_EndDate">End Date:</label>
+            <input type="text" id="ex4_EndDate" placeholder="MM/dd/yyyy hh:mm:ss tt" value="05/10/2021"><br><br>
+            <input type="button" onclick="example_4()" value="Submit"><br><br>
+            <span id='ex4_display'></span>
+
+        </div>
+        <div style="float: left; width: 30%;min-height: 235px;">
+            <h3>5. Difference from [today + add_day] </h3>
+
+            <label for="ex5_Date">Date:</label>
+            <input type="text" id="ex5_Date" placeholder="MM/dd/yyyy hh:mm:ss tt" value="05/15/2021 05:30:30 pm"> ex:
+            05/15/2021<br><br>
+            <label for="ex5_day">Day add:</label><input type="text" id="ex5_day" placeholder="dd" value="5"><br><br>
+            <input type="button" onclick="example_5()" value="Submit"><br><br>
+            <span id='ex5_display'></span>
+
+        </div>
+        <br style="clear: left;" />
+    </div>
+
+    <br>
+    <br>
+    <h1>Date Formats</h1>
+    <p>The following table describes various DateTime formats and their results.</p>
+    <hr>
+
+    <table>
+        <tr>
+            <th>Format</th>
+            <th>Result</th>
+        </tr>
+        <tr>
+            <td>MM/dd/yyyy</td>
+            <td>05/29/2021</td>
+        </tr>
+    </table>
+    <p>
+        <b>year</b><br>
+        y-> Year, no leading zero (e.g. 2015 would be 15)<br>
+        yy-> Year, leading zero (e.g. 2015 would be 015)<br>
+        yyy-> Year, (e.g. 2015)<br>
+        yyyy-> Year, (e.g. 2015)<br>
+        <br>
+        <b>month</b><br>
+        M-> Month number(eg.3)<br>
+        MM-> Month number with leading zero(eg.04)<br>
+        MMM-> Abbreviated Month Name (e.g. Dec)<br>
+        MMMM-> Full month name (e.g. December)<br>
+        <br>
+        <b>day</b><br>
+        d -> Represents the day of the month as a number from 1 through 31.<br>
+        dd -> Represents the day of the month as a number from 01 through 31.<br>
+        ddd-> Represents the abbreviated name of the day (Mon, Tues, Wed, etc).<br>
+        dddd-> Represents the full name of the day (Monday, Tuesday, etc).<br>
+        <br>
+        <b>hour</b><br>
+        h-> 12-hour clock hour (e.g. 4).<br>
+        hh-> 12-hour clock, with a leading 0 (e.g. 06)<br>
+        H-> 24-hour clock hour (e.g. 15)<br>
+        HH-> 24-hour clock hour, with a leading 0 (e.g. 22)<br>
+        <br>
+        <b>minute</b><br>
+        m-> Minutes<br>
+        mm-> Minutes with a leading zero<br>
+        <br>
+        <b>second</b><br>
+        s-> Seconds<br>
+        ss-> Seconds with leading zero<br>
+        <br>
+        <b>abbr</b><br>
+        t-> Abbreviated AM / PM (e.g. A or P)<br>
+        tt-> AM / PM (e.g. AM or PM<br>
+    </p>
+
+    <div style="width: 100%;">
+        <div style="float: left; width: 30%;min-height: 235px;">
+            <h3>1. Datetime format</h3>
+
+            <label for="f1_Date">Date:</label>
+            <input type="text" id="f1_Date" placeholder="MM/dd/yyyy hh:mm:ss tt" value="05/15/2021 05:30:30 pm"> ex:
+            05/15/2021<br><br>
+
+            <label for="f1_pattern">Pattern:</label>
+            <input type="text" id="f1_pattern" placeholder="MM/dd/yyyy hh:mm:ss tt" value="MM/dd/yyyy hh:mm:ss tt">
+            <br>ex:
+            MM/dd/yyyy hh:mm:ss tt<br><br>
+
+            <input type="button" onclick="df_1()" value="Submit"><br><br>
+            <span id='df1_display'></span>
+
+        </div>
+        <div style="float: left; width: 30%;min-height: 235px;">
+            <h3>2. Todays DateTime Format</h3>
+
+            <input type="button" onclick="df_2()" value="Submit"><br><br>
+            <span id='df2_display'></span>
+
+        </div>
+        <div style="float: left; width: 30%;min-height: 235px;">
+            <h3>3. Day Add [today + add_day] </h3>
+
+            <label for="df3_Day">Day:</label>
+            <input type="text" id="df3_Day" placeholder="10" value="5"> ex:10<br><br>
+            <input type="button" onclick="df_3()" value="Submit"><br><br>
+            <span id='df3_display'></span>
+
+        </div>
+        <br style="clear: left;" />
+    </div>
+
+    <script src="times.js"></script>
+    <script type="text/javascript">
+        function example_1() {
+            let startDate = document.getElementById('StartDate').value;
+            let endDate = document.getElementById('EndDate').value;
+            let res = times.dateDiff(startDate, endDate)
+            let result = res.diff.y + " years " + res.diff.mo + " months " + res.diff.d + " days " + res.diff.h + " hours " + res.diff.m + " minutes " + + res.diff.s + " seconds.";
+
+            document.getElementById('ex1_display').innerHTML = result;
+        }
+
+        function example_2() {
+            let Date = document.getElementById('ex2_Date').value;
+            let res = times.dateDiff(Date)
+            let result = res.diff.y + " years " + res.diff.mo + " months " + res.diff.d + " days " + res.diff.h + " hours " + res.diff.m + " minutes " + + res.diff.s + " seconds.";
+
+            document.getElementById('ex2_display').innerHTML = result;
+        }
+
+        function example_3() {
+            let Date = document.getElementById('ex3_Date').value;
+            let res = times.dateDiff(Date)
+            let result = res.diff.y + " years " + res.diff.mo + " months " + res.diff.d + " days " + res.diff.h + " hours " + res.diff.m + " minutes " + + res.diff.s + " seconds.";
+
+            document.getElementById('ex3_display').innerHTML = result;
+
+            var refresh = 1000;
+            setTimeout('example_3()', refresh)
+        }
+
+        function example_4() {
+            let startDate = document.getElementById('ex4_StartDate').value;
+            let endDate = document.getElementById('ex4_EndDate').value;
+            let res = times.dateDiff(startDate, endDate)
+            let result = "total years: " + res.diff.y + "<br> total month " + res.diff.MO + "<br> total days " + res.diff.D + " <br> total hours " + res.diff.H + " <br> total minutes " + res.diff.M + " <br> total seconds " + + res.diff.S;
+
+            document.getElementById('ex4_display').innerHTML = result;
+        }
+
+
+        function example_5() {
+            let Date = document.getElementById('ex5_Date').value;
+            let day = document.getElementById('ex5_day').value;
+            let res = times.add_day(day).dateDiff(Date);
+            let result = res.diff.y + " years " + res.diff.mo + " months " + res.diff.d + " days " + res.diff.h + " hours " + res.diff.m + " minutes " + + res.diff.s + " seconds.";
+
+            document.getElementById('ex5_display').innerHTML = result;
+        }
+
+        function df_1() {
+            let date = document.getElementById('f1_Date').value;
+            let pattern = document.getElementById('f1_pattern').value;
+
+            let res = times.format(date, pattern).date;
+            document.getElementById('df1_display').innerHTML = res;
+        }
+
+        function df_2() {
+            let res = times.format('dd/MMMM/yyyy h:m:s tt').date;
+            let utc_res = times.Utc(true).format("dd/MMMM/yyyy h:m:s tt").date;
+            times.Utc(false);
+            document.getElementById('df2_display').innerHTML = res + "<br> UTC: " + utc_res;
+        }
+
+        function df_3() {
+            let day = document.getElementById('df3_Day').value;
+            let res = times.add_day(day).format('dd/MMMM/yyyy h:m:s tt').date;
+            let utc_res = times.Utc(true).add_day(day).format("dd/MMMM/yyyy h:m:s tt").date;
+            times.Utc(false);
+            document.getElementById('df3_display').innerHTML = res + "<br> UTC: " + utc_res;
+        }
+
+    </script>
+    <style>
+        body {
+            width: 1170px;
+            margin: 0 auto;
+        }
+
+        table {
+            font-family: Arial, Helvetica, sans-serif;
+            border-collapse: collapse;
+            width: 400px;
+        }
+
+        table td,
+        table th {
+            border: 1px solid #ddd;
+            padding: 4px;
+        }
+
+        table tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        table tr:hover {
+            background-color: #ddd;
+        }
+
+        table th {
+            padding-top: 6px;
+            padding-bottom: 5px;
+            text-align: left;
+            background-color: #4CAF50;
+            color: white;
+        }
+    </style>
+</body>
+
+</html>
