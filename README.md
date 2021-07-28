@@ -8,7 +8,7 @@ We suggest all to include this plug-in after loading Dom.
 
 
 ```javascript
-alertBox.success('Success Message');
+<script src="times.js"></script>
 ```
 
 ### Browser support
