@@ -35,7 +35,7 @@ let month = res.diff.mo;
 let days = res.diff.d;
 let hours = res.diff.h;
 let minutes = res.diff.m; 
-let = seconds = res.diff.s;
+let seconds = res.diff.s;
 ```
 
 ##### 2. Difference from today:
@@ -53,7 +53,7 @@ let month = res.diff.MO;
 let days = res.diff.D;
 let hours = res.diff.H;
 let minutes = res.diff.M; 
-let = seconds = res.diff.S;
+let seconds = res.diff.S;
 ```
 
 ##### 4. Real time changing
